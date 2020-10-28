@@ -1,0 +1,27 @@
+import random
+
+number = random.randint(1, 100)
+print(number)
+game = True
+
+
+while game == True:
+  Guess = int(input("What do you think the number is?(1-100):"))
+  if Guess > number:
+    answer = "Higher"
+  elif Guess < number:
+    answer = "Lower"
+  elif Guess == number:
+    answer = "Correct"
+    game = False
+  else:
+    print("Invalid number, please try again")
+
+  if answer == "Higher":
+    print("Too high please try again")
+  elif answer == "Lower":
+    print("Too low please try again")
+  elif answer == "Correct":
+    print("You got it!")
+  else:
+    print("Invalid number, please try again")
